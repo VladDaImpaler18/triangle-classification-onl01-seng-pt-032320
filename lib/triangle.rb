@@ -19,8 +19,6 @@ attr_accessor :a, :b, :c
       return :equilateral if check == 1
       return :isosceles if check == 2
       return :scalene if check == 3
-    else 
-      nil
     end
   end
   
