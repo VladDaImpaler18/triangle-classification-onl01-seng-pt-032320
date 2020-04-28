@@ -14,6 +14,7 @@ attr_accessor :a, :b, :c
   
   def valid?
     raise TriangleError if [@a,@b,@c].any?{|side| side <= 0 }
+    raise TriangleError if (@a + @b < @c) || (@a + @c < @b) || @b + @c < @a)
   end
   
   def kind
