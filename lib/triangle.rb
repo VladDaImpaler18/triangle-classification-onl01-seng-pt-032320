@@ -18,6 +18,7 @@ attr_accessor :a, :b, :c
   end
   
   def kind
+    binding.pry
     if valid?
       return :equilateral if check == 1
       return :isosceles if check == 2
