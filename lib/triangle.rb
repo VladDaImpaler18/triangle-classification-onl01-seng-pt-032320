@@ -11,12 +11,17 @@ attr_accessor :a, :b, :c
   def check
     [@a,@b,@c].uniq.count
   end
-
+  
+  
+  
   def kind
-    #binding.pry
-    return :equilateral if check == 1
-    return :isosceles if check == 2
-    return :scalene if check == 3
+    if valid?
+      return :equilateral if check == 1
+      return :isosceles if check == 2
+      return :scalene if check == 3
+    else 
+      nil
+    end
   end
   
   class TriangleError < StandardError
