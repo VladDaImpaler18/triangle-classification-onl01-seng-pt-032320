@@ -12,7 +12,9 @@ attr_accessor :a, :b, :c
     [@a,@b,@c].uniq.count
   end
   
-  
+  def valid?
+    
+  end
   
   def kind
     if valid?
